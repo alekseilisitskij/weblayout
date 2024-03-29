@@ -1,0 +1,2 @@
+"use strict";fn("some string");
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOlsiZm4iXSwibWFwcGluZ3MiOiJhQUFBQSxHQUFHIiwiZmlsZSI6ImFwcC5qcyIsInNvdXJjZXNDb250ZW50IjpbImZuKCdzb21lIHN0cmluZycpOyJdfQ==

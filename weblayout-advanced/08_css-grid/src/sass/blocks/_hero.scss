@@ -1,0 +1,72 @@
+.hero {
+  padding-top: 41px;
+  padding-bottom: 68px;
+  background-color: #e5e5e5;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+  &__left {
+    padding-top: 405px;
+    padding-left: 59px;
+    position: relative;
+    background-image: url('../img/herobg.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
+  &__subject {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $whiteColor;
+    margin-bottom: 3px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 19px;
+    width: 415px;
+    font-weight: 600;
+    font-size: 36px;
+    color: $whiteColor;
+  }
+  &__btn {
+    @include clearButtonStyles;
+    padding: 15px 22px;
+    background-color: #FF6E30;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $whiteColor;
+  }
+  &__cash {
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    background-color: $blackColor;
+    width: 123px;
+    height: 30px;
+    padding: 7px 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $whiteColor;
+  }
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #202020;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 30px;
+  }
+  &__girl1 {
+    grid-column-start: 1;
+    grid-column-end: 3  ;
+  }
+}

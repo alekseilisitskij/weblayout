@@ -1,0 +1,89 @@
+.payment-title {
+	width: 100%;
+}
+.form-container {
+	grid-column-gap: 10px;
+	max-width: 400px;
+	color: #707070;
+	grid-template: "name name" 90px
+      "number number" 90px
+      "expiration security" 90px / auto auto;
+	padding: 20px;
+	display: grid;
+	.field-container {
+		&:first-of-type {
+			grid-area: name;
+		}
+		&:nth-of-type(4) {
+			grid-area: number;
+		}
+		&:nth-of-type(3) {
+			grid-area: expiration;
+		}
+		&:nth-of-type(2) {
+			grid-area: security;
+		}
+	}
+}
+.field-container {
+	position: relative;
+	input {
+		box-sizing: border-box;
+	}
+}
+label {
+	padding-bottom: 5px;
+	font-size: 13px;
+}
+input {
+	width: 100%;
+	border: 1px solid #dcdcdc;
+	border-radius: 3px;
+	margin-top: 3px;
+	padding: 15px;
+	font-size: 16px;
+}
+.ccicon {
+	height: 36px;
+	width: 58px;
+	position: absolute;
+	top: calc(50% - 17px);
+	right: 6px;
+}
+.validate-wrapper {
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+	display: flex;
+}
+.validate-button-wrapper {
+	width: 100%;
+}
+#validate-button {
+	color: #fff;
+	background-color: #616161;
+	border: 0;
+	border-radius: 7px;
+	margin-bottom: 20px;
+	padding: 12px 50px;
+	font-size: 23px;
+	transition: background-color .3s;
+}
+.validate-result {
+	opacity: 0;
+	width: 100%;
+	max-width: 650px;
+	text-align: center;
+	color: #fff;
+	border-radius: 10px;
+	padding: 10px 100px;
+	transition: background-color .5s;
+}
+#validate-button[disabled] {
+	background-color: #ccc;
+	color: #666;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+

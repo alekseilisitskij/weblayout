@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <title>High pass</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__logo">
+        <svg class="header__svg">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </div>
+      <ul class="nav nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link">О студии</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Наши проекты</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Услуги</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Мастер-классы</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+      <button class="header__button header__button--delete btn-reset js-open-search"  aria-label="Найти" type="button">
+        <svg class="header__svg header__svg--search">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+      </button>
+      <form class="header__search-form1 js-form" action="/" method="GET">
+        <!-- <button class="header__search-btn header__search-btn_submit btn-reset" aria-label="Найти" type="submit">
+            <svg class="header__svg header__svg--search">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+        </button> -->
+        <input type="text" class="header__search-input" placeholder="Что будем иcкать?">
+          <button class="header__close-btn btn-reset js-close-search" aria-label="Закрыть" type="button">
+            <svg class="header__svg header__svg--search">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+      </form>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <button class="btn-reset burger">
+          <span class="burger__line burger__line--1"></span>
+          <span class="burger__line burger__line--2"></span>
+          <span class="burger__line burger__line--3"></span>
+        </button>
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="nav__link">О студии</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Наши проекты</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Услуги</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Мастер-классы</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__left">
+          <div class="hero__cash">#мастеркласс</div>
+          <span class="hero__subject">Мастер-класс от Игоря Робова</span>
+          <h1 class="hero__title">Неоновый фотосет 2.0  7 июля 20:00</h1>
+          <button class="hero__btn">Узнать больше</button>
+        </div>
+        <div class="hero__right">
+          <h2 class="hero__subtitle">Работы участников предыдущего мастер-класса</h2>
+          <div class="hero__grid">
+            <img class="hero__girl1" src="img/girl1.jpg" alt="Девушка">
+            <img src="img/girl2.jpg" alt="Девушка">
+            <img src="img/girl3.jpg" alt="Девушка">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="atelier">
+      <div class="container atelier__container">
+        <div class="atelier__left">
+          <h2 class="atelier__subtitle">О студии</h2>
+          <p class="atelier__descr">
+            В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.
+          </p>
+        </div>
+        <div class="atelier__right">
+          <img class="atelier__camera" src="img/camera.jpg" alt="Камера">
+          <span class="atelier__subject">Подписаться на рассылку</span>
+          <form class="atelier__form" action="#">
+            <label>
+                <span class="visually-hidden">Введите E-mail</span>
+                <input name="email" class="atelier__email" type="email" placeholder="E-mail">
+            </label>
+            <button class="atelier__button">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="project">
+      <div class="container">
+        <h2 class="subtitle project__subtitle">
+          Наши проекты
+        </h2>
+        <ul class="project__list">
+          <li class="project__item project__item--landscape">
+            <picture>
+              <img class="project__img" src="img/landscape.jpg" alt="Пейзаж">
+            </picture>
+            <p class="project__text">
+              Синтетически, смешаны с не уникальными данными до степени…
+            </p>
+            <div class="project__cash">#пейзаж</div>
+            <div class="project__calendar"><span class="project__data">16 июня</span></div>
+          </li>
+          <li class="project__item project__item--portraitmen">
+            <picture>
+              <img class="project__img" src="img/portraitmen.jpg" alt="Мужчина">
+            </picture>
+            <p class="project__text">
+              В своём стремлении улучшить опыт мы упускаем, что явные...
+            </p>
+            <div class="project__cash">#портрет</div>
+            <div class="project__calendar"><span class="project__data">28 мая</span></div>
+          </li>
+          <li class="project__item project__item--object">
+            <picture>
+              <img class="project__img" src="img/object.jpg " alt="Пейзаж">
+            </picture>
+            <p class="project__text">
+              Равным образом, высокое качество позиционных…
+            </p>
+            <div class="project__cash">#портрет</div>
+            <div class="project__calendar"><span class="project__data">14 мая</span></div>
+          </li>
+          <li class="project__item project__item--fuiji">
+            <div class="project__cash">#fuji</div>
+            <div class="project__calendar"><span class="project__data">9 апреля</span></div>
+            <h3 class="project__subject">
+              Cемантический разбор
+            </h3>
+            <p class="project__text project__text--calendar">
+              В рамках спецификации современных стандартов, интерактивные прототипы
+            </p>
+            <button class="project__btn">
+              О проекте
+            </button>
+          </li>
+          <li class="project__item project__item--oblivion">
+            <div class="project__cash">#проектзабвение</div>
+            <div class="project__calendar"><span class="project__data">20 марта</span></div>
+            <h3 class="project__subject">
+              Забвение
+            </h3>
+            <p class="project__text project__text--oblivion">
+              Играет важную роль в формировании глубокомысленных рассуждений
+            </p>
+            <button class="project__btn">
+              О проекте
+            </button>
+          </li>
+          <li class="project__item project__item--orange">
+            <picture>
+              <img class="project__img" src="img/orange.jpg" alt="Пейзаж">
+            </picture>
+            <p class="project__text">
+              Как принято считать, многие известные личности и по сей день остаются уделом либералов…
+            </p>
+            <div class="project__cash">#ретушь</div>
+            <div class="project__calendar"><span class="project__data">9 марта</span></div>
+          </li>
+          <li class="project__item project__item--portraitgirl">
+            <picture>
+              <img class="project__img" src="img/portraitgirl.jpg" alt="Пейзаж">
+            </picture>
+            <p class="project__text">
+              С учётом сложившейся международной обстановки, новая модель организационной…
+            </p>
+            <div class="project__cash">#портрет</div>
+            <div class="project__calendar"><span class="project__data">1 марта</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container contacts__container">
+        <h2 class="contacts__subtitle">
+          Контакты
+        </h2>
+        <div class="contacts__left">
+          <div class="contacts__address">
+            <h3 class="contacts__subject">
+              Студия «High pass»
+            </h3>
+            <p class="contacts__text">
+              107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+            </p>
+            <div class="contacts__tel">
+              <a href="tel:+749542423532" class="contacts__link">+7 495 424-23-532</a>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <div class="map" id="map" style="width: 100%; height: 100%"></div>
+          </div>
+        </div>
+        <div class="contacts__right">
+          <h3 class="contacts__subject contacts__subject--right">
+            Оставить заявку
+          </h3>
+          <p class="contacts__descr">
+            Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату съёмки или другого мероприятия
+          </p>
+          <form class="contacts__form" action="#">
+            <label>
+              <span class="visually-hidden">
+                Введите Имя
+              </span>
+              <input name="name" class="contacts__form-name" type="text" placeholder="Имя*">
+            </label>
+            <label>
+              <span class="visually-hidden">
+                Введите E-mail
+              </span>
+              <input name="email" class="contacts__form-email" type="email" placeholder="E-mail*">
+            </label>
+            <label>
+              <span class="visually-hidden">
+                Введите текст
+              </span>
+              <textarea name="text" class="contacts__form-textarea" placeholder="Комментарий"></textarea>
+            </label>
+            <button class="contacts__button">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
+</body>
+</html>

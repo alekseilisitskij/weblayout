@@ -1,0 +1,145 @@
+.header {
+  position: relative;
+  background-color: $blackColor;
+  &__container {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 26px;
+  }
+
+  &__bottom {
+    display: none;
+  }
+
+  &__logo {
+    margin-right: 139px;
+  }
+
+  &__svg {
+    width: 190px;
+    height: 30px;
+  }
+
+  &__button {
+    @include clearButtonStyles;
+  }
+
+  &__search-form1 {
+    position: absolute;
+    display: block;
+    z-index: 14;
+    right: 127px;
+    width: 342px;
+    top: 6px;
+    display: none;
+    align-items:center;
+    background-color: #202020;
+    padding: 20px 13px 18px 30px;
+    transform-origin: right;
+  }
+
+  &__search-form1.is-opened {
+    display: flex;
+    animation-name: search-open;
+    animation-duration: .3s;
+  }
+
+  &__search-form1.is-closed {
+    animation-name: search-close;
+    animation-duration: .3s;
+  }
+
+  &__svg--search {
+    width: 25px;
+    height: 25px
+  }
+
+  &__search-btn,
+  &__close-btn {
+    @include clearButtonStyles;
+  }
+
+  &__search-input {
+    width: 308px;
+    background-color: inherit;
+    outline: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    border-right: none;
+    border-bottom: 1px solid #fff;
+    &::-webkit-input-placeholder{
+      color: #fff;
+    }
+	  &::-moz-placeholder{
+     	color: #fff;
+    }
+	  &:-ms-input-placeholder{
+      color: #fff;
+    }
+  }
+}
+
+.nav {
+  @include clearListStyles;
+  display: flex;
+  gap: 79px;
+  align-items: center;
+  margin-right: auto;
+  &__link {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    color: #fff;
+    transition: color .2s ease-in-out;
+  }
+  &__link:hover {
+    color: #FF6E30;
+  }
+  &__link:focus {
+    outline: 5px solid #FF6E30;
+    background-color: #FF6E30;
+    outline-offset: 0;
+    color: #FFF;
+  }
+  &__link:active {
+    background-color: inherit;
+    outline: none;
+    color: #CE4307;
+  }
+  &__search-input {
+    flex-grow: 1;
+    padding-bottom: 6px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 14px;
+    color: #fff;
+    transition: border-color 0.2s ease-in-out;
+   }
+}
+
+@keyframes search-open {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes search-close {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}

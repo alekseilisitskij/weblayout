@@ -1,0 +1,31 @@
+.body {
+  position:relative;
+}
+
+.card-link {
+  width: 200px;
+}
+
+.spinner-border {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  position:absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.spinner-border_top{
+  position: absolute;
+  top: 300px;
+  right: 950px;
+}
+
+.block__hidden {
+  display: none;
+}

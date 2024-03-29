@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+      <!-- Блок Header -->
+      <div class="header">
+        <a href="#" class="logo header__logo">
+          <img src="assets/img/skb.svg" class="header__img" alt="Лого">
+        </a>
+        <form class="form" id="filter__form">
+          <input id = "filter__inp" class="form__input" type="text" placeholder="Введите запрос">
+        </form>
+      </div>
+      <!-- Таблица -->
+      <div class="block">
+        <h1 class="block__title">Клиенты</h1>
+
+        <div class="block__list"></div>
+        <div class="block__spin">
+          <div class="spinner-border text-info block__spinner" role="status">
+            <span class="visually-hidden">Загрузка...</span>
+          </div>
+        </div>
+      </div>
+      <!-- Кнопка добавить -->
+      <button class="btn block__btn"><svg class="block__btn_svg" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="Vector" d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z" fill="#9873FF"/>
+        </svg>Добавить клиента</button>
+    </div>
+    <!-- Modal -->
+    <div class="modal__newClient" id="newClientModal">
+      <div class="modal__content">
+        <div class="modal__form">
+          <form class="form" action="#" id="newClientForm">
+            <h2 class="modal__subtitle">Новый клиент</h2>
+            <div class="text-field">
+                <input class="form-control form_input" id="user_surname" name="user_surname" required type="text">
+                <label class="input-label">Фамилия<span class="input-title">*</span></label>
+            </div>
+            <div class="text-field">
+              <input class="form-control form_input" id="user_name" name="user_name" required type="text">
+              <label class="input-label">Имя<span class="input-title">*</span></label>
+          </div>
+          <div class="text-field">
+            <input class="form-control form_input" id="user_lastname" name="user_lastname" required type="text">
+            <label class="input-label">Отчество</label>
+        </div>
+          </form>
+        </div>
+        <div class="modal__btn">
+
+          <button class="btn-reset modal__form_btn" id="addContactBtn">
+          <img src="assets/img/add_circle_outline.svg" alt="circle">
+            Добавить контакт</button>
+        </div>
+        <button class="btn-reset modal__content_btn-create" id="saveBtn">Сохранить</button>
+        <button class="btn-reset modal__content_close" id="cancelBtn">Отмена</button>
+        <div class="modal__close">
+          <button class="btn-reset btn-closed">
+            <img src="assets/img/close.svg" alt="close">
+          </button>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modal change -->
+  <div class="modal__changeClient">
+    <div class="modal__content">
+      <div class="modal__form">
+        <form class="form" action="#" id="newClientForm">
+          <h2 class="modal__subtitle">Изменить данные <span class="modal__span">ID: 123456</span></h2>
+          <div class="text-field">
+              <input class="form-control form_input" id="user_surnameChange" name="user_surname" required type="text">
+              <label class="input-label">Фамилия<span class="input-title">*</span></label>
+          </div>
+          <div class="text-field">
+            <input class="form-control form_input" id="user_nameChange" name="user_name" required type="text">
+            <label class="input-label">Имя<span class="input-title">*</span></label>
+        </div>
+        <div class="text-field">
+          <input class="form-control form_input" id="user_lastnameChange" name="user_lastname" required type="text">
+          <label class="input-label">Отчество</label>
+      </div>
+        </form>
+      </div>
+      <div class="modal__btn modal__btnChange">
+        <button class="btn-reset modal__form_btn modal__form_btnChange" id="addChangeContactBtn">
+        <img src="assets/img/add_circle_outline.svg" alt="circle">
+          Добавить контакт</button>
+      </div>
+      <div class="modal__close">
+        <button class="btn-reset btn-closed">
+          <img src="assets/img/close.svg" alt="close">
+        </button>
+      </div>
+      <button class="btn-reset modal__content_btn-create" id="changeBtn">Сохранить</button>
+      <button class="btn-reset modal__content_close" id="btnDeleteChange">Удалить клиента</button>
+  </div>
+</div>
+<!-- Modal-delete -->
+<div class="modal__deleteClient">
+  <div class="modal__content">
+    <div class="modal__form">
+        <h2 class="modal__subtitle text-center">Удалить данные</h2>
+        <p class="modal__text">Вы действительно хотите удалить данного клиента?</p>
+    </div>
+    <div class="modal__close">
+      <button class="btn-reset btn-closed">
+        <img src="assets/img/close.svg" alt="close">
+      </button>
+    </div>
+    <button class="btn-reset modal__content_btn-delete">Удалить</button>
+    <button class="btn-reset modal__content_close">Отмена</button>
+</div>
+</div>
+</body>
+</html>

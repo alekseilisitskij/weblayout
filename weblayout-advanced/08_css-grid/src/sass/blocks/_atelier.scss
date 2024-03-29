@@ -1,0 +1,72 @@
+.atelier {
+  padding-top: 30px;
+  padding-bottom: 70px;
+  background-color: #202020;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    color: $whiteColor;
+  }
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #cacaca;
+  }
+  &__right {
+    padding-top: 32px;
+  }
+  &__camera {
+    display: block;
+    margin-bottom: 25px;
+  }
+  &__subject {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 22px;
+    color: $whiteColor;
+  }
+  &__email {
+    padding: 15px 23px;
+    width: 474px;
+    height: 50px;
+    background-color: #4A4A4A;
+    border: none;
+    margin-right: 26px;
+  }
+  &__email {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #cacaca;
+    &::-webkit-input-placeholder{
+      color: #cacaca;
+    }
+	  &::-moz-placeholder{
+     	color: #cacaca;
+    }
+	  &:-ms-input-placeholder{
+      color: #cacaca;
+    }
+  }
+  &__button {
+    @include clearButtonStyles;
+    padding: 15px 22px;
+    background-color: #FF6E30;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $whiteColor;
+  }
+}

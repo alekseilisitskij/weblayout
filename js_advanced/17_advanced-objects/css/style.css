@@ -1,0 +1,7 @@
+.input_value {
+    width: 300px;
+}
+
+.is-invalid {
+  border-color: red;
+}

@@ -1,0 +1,16 @@
+.contacts {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left {
+    width: 850px;
+    position: relative;
+    margin-right: 30px;
+  }
+  &__address {
+    display: none;
+  }
+}
